@@ -1,4 +1,11 @@
 const sql = require("mssql");
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
+const loginRouter = require("./Routers/loginRouter");
+const courseRouter = require("./Routers/courseRouter");
+const examRouter = require("./Routers/examRouter");
 
 var config = {
   server: "localhost",
@@ -11,21 +18,33 @@ var config = {
   },
   options: {
     port: 1433,
-    database: "ITI",
+    database: "Online_Examination_System",
     rowCollectionOnDone: true,
     useColumnNames: false,
     trustServerCertificate: true,
   },
 };
 
-async function connect() {
-  try {
-    let pool = await sql.connect(config);
-    let res = await pool.request().query("Select * from Student");
-    console.dir(res.recordset);
-  } catch (err) {
-    console.log(err);
-  }
-}
+sql
+  .connect(config)
+  .then(() => {
+    console.log("DB connected");
+    const server = express();
+    server.listen(process.env.PORT || 8080, () => {
+      console.log("listening...");
+    });
+    // server.use("/", (req, res) => {
+    //   res.send("home page");
+    // });
 
-connect();
+    server.use(cors());
+    server.use(bodyParser.json());
+    server.use(bodyParser.urlencoded({ extended: false }));
+
+    server.use("/login", loginRouter);
+    server.use("/course/exam", examRouter);
+    server.use("/course", courseRouter);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
