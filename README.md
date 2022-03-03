@@ -6,3 +6,4 @@
 4- Run "npm install"<br />
 5- Rum "npm start"<br />
 6- Run "npm run open"<br />
+7- To test the project, you can login with student credentials (email: mostafafathy@gmail.com, password:123456) <br/>
