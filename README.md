@@ -1,12 +1,13 @@
 # Examination_System
 
 ## Prerequisites: <br />
+
 1- Make sure the TCP/IP protocol in enabled for sqlserver service: <br />
-- windows+R > compmgmt.msc > sql server configuration manager > sql server network configuration > protocols for MSSQLSERVER > TCP/IP: enabled <br />
+  windows+R > compmgmt.msc > sql server configuration manager > sql server network configuration > protocols for MSSQLSERVER > TCP/IP: enabled <br /><br />
 2- Make sure the sql server browser is running: <br />
-- in the sql server configuration manager > sql server services > sql server browser: running <br />
+  in the sql server configuration manager > sql server services > sql server browser: running <br /><br />
 3- Restart your sqlserver services: <br />
-- windows+R > services.msc > search for sql server > restart <br />
+  windows+R > services.msc > search for sql server > restart <br />
 
 ## To run the project: <br />
 1- Download the sqlserver DB backup from here : https://drive.google.com/file/d/12maXzHKWU_9Q7Q1QQBjN76c37M8PK8Mf/view?usp=sharing <br />
