@@ -7,7 +7,7 @@
 - in the sql server configuration manager > sql server services > sql server browser: running <br />
 3- Restart your sqlserver services: <br />
 - windows+R > services.msc > search for sql server > restart <br />
-<br />
+
 ## To run the project: <br />
 1- Download the sqlserver DB backup from here : https://drive.google.com/file/d/12maXzHKWU_9Q7Q1QQBjN76c37M8PK8Mf/view?usp=sharing <br />
 2- Make a new login for the sqlserver with credentials (username: test, password: test) and add it as a user for the "Examination_System" DB with role "db_owner" <br />
