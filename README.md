@@ -14,6 +14,6 @@
 2- Make a new login for the sqlserver with credentials (username: test, password: test) and add it as a user for the "Examination_System" DB with role "db_owner" <br />
 3- Download the source code and open the project folder<br />
 4- Run "npm install"<br />
-5- Rum "npm start"<br />
+5- Run "npm start"<br />
 6- Run "npm run open"<br />
 7- To test the project, you can login with student credentials (email: mostafafathy@gmail.com, password:123456) <br/>
